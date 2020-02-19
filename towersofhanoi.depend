@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1510592253 source:d:\works\c++\towersofhanoi\main.cpp
+	<JAYcreations.h>
+
+1512406935 source:d:\works\c++\done\towersofhanoi\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+
