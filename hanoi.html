@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* outline: 1px solid green; */
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            min-height: 100vh;
+            min-width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #space{
+            display:flex;
+            width:100%;
+            height:100%;
+            /* padding-left:1em;
+            padding-right:1em; */
+        }
+        .towerSpace{
+            width: 33.33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .towerSpace:hover .tower{
+            box-shadow: 0 5px 8px 1px #0008;
+            transition: 0s;
+        }
+        .tower{
+            width: 2em;
+            height: 20em;
+            background-color: #0008;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            cursor: pointer;
+            /* position: */
+        }
+        .tower:first-child{
+            ;
+        }
+        .block{
+            transition: .2s ease-out;
+            height:2em;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            margin-top: 1em;
+        }
+        .block:hover{
+            border: 1px solid black;
+            transition: 0s;
+        }
+        .block1{
+            background-color: #000;
+            width: 200%;
+        }
+        .block2{
+            background-color: #000;
+            width: 400%;
+        }
+    </style>
+    <script>
+        var stack = [
+            [4, 3, 2, 1],
+            [],
+            []
+        ]
+    </script>
+</head>
+<body>
+    <div id="space">
+        <div class="towerSpace">
+            <div class="tower">
+                <div class="block block2"></div>
+                <div class="block block1"></div>
+            </div>
+        </div>
+        <div class="towerSpace">
+            <div class="tower">
+                <div class="block block2"></div>
+            </div>
+        </div>
+        <div class="towerSpace">
+            <div class="tower">
+                <div class="block block3"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        towers = document.getElementById('towers')
+        number_of_blocks = 4//parseInt(prompt('Select the number of Hanoi blocks that you want'))
+        for (var i=0; i<number_of_blocks; i++){
+            console.log(towers)
+        }
+    </script>
+</body>
+</html>
