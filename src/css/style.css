@@ -15,14 +15,15 @@ body{
     padding-right:1em; */
 }
 .towerSpace{
-    width: 33.33%;
+    width: 33.33vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .tower{
     width: 2em;
-    height: 20em;
+    height: 40vh;
     background-color: #0008;
     border-radius: 8px;
     display: flex;
@@ -39,11 +40,11 @@ body{
     transition: 0s;
 }
 .block{
-    transition: .2s ease-out;
-    height:2em;
-    border-radius: 8px;
+    height:10%;
+    margin-top: .5em;
     border: 1px solid transparent;
-    margin-top: 1em;
+    border-radius: 8px;
+    transition: .2s ease-out;
 }
 .block:hover{
     border: 1px solid black;
@@ -67,20 +68,27 @@ body{
 }
 
 @media only screen and (max-width: 480px) {
-    .tower {
-        width: 1em;
-        height: 12em;
+    #space{
+        display: flex;
+        flex-direction: column;
+    }
+    .towerSpace{
+        width: 100%;
+        height: 33.33%;
+    }
+    .tower{
+        height: 60%;
     }
     .block1{
-        width: 190%;
+        width: 200%;
     }
     .block2{
-        width: 320%;
+        width: 300%;
     }
     .block3{
-        width: 430%;
+        width: 400%;
     }
     .block4{
-        width: 550%;
+        width: 500%;
     }
 }
