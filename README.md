@@ -1,5 +1,5 @@
 # Tower of Hanoi
-### Graphical Representation
+    Graphical representation of Tower of Hanoi
 _____________________________
 
 ## Built using:
