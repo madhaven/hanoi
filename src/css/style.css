@@ -7,6 +7,44 @@ body{
     padding: 0;
     overflow: hidden;
 }
+
+.menu-bar{
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    justify-content: end;
+    position: relative;
+}
+
+.menu{
+    cursor: pointer;
+    margin: 0.5em;
+    z-index: 10;
+}
+.sidemenu{
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 1em;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+    background-color: beige;
+    transform: translateX(450px);
+}
+
+.sidemenu-moved{
+    transform: translateX(0px);
+}
+
+.hidden{
+    display: none;
+}
+
 #space{
     display:flex;
     width:100%;
