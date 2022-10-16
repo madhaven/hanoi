@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Towers of Hanoi | Playground</title>
     <link rel="stylesheet" type="text/css" href="src/css/style.css" />
-    <script src="src/js/script.js"></script>
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="header">
+        <div class="container">
+            <div id="countdown">
+              <ul>
+                <li><span id="count"></span>moves</li>
+                <li></li><li></li>
+                <li><span id="stopwatch"></span>timer</li>
+              </ul>
+            </div>
+          </div>
+    </div>
     <div id="space">
         <div class="towerSpace" onclick="towerClicked(0)" ondrop="dropHandler(0, event)" ondragover="dragOverHandler(event)">
             <div class="tower">
@@ -23,6 +34,7 @@
             <div class="tower"></div>
         </div>
     </div>
+    <script src="src/js/script.js"></script>
     <script src="src/js/initialize.js"></script>
 </body>
 </html>

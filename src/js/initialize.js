@@ -5,4 +5,7 @@ data = [
     [],
     []
 ]
+moves = 0
+document.getElementById("count").innerText = moves
+document.getElementById("stopwatch").innerHTML = '00:00';
 updateUI()
