@@ -1,0 +1,86 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#space{
+    display:flex;
+    width:100%;
+    height:100%;
+    /* padding-left:1em;
+    padding-right:1em; */
+}
+.towerSpace{
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tower{
+    width: 2em;
+    height: 20em;
+    background-color: #0008;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    cursor: pointer;
+    /* position: */
+}
+.tower.selected .block:last-child{
+    transform: translate(0, -100%);
+}
+.towerSpace:hover .tower :last-child{
+    box-shadow: 0 5px 8px 1px #0008;
+    transition: 0s;
+}
+.block{
+    transition: .2s ease-out;
+    height:2em;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    margin-top: 1em;
+}
+.block:hover{
+    border: 1px solid black;
+    transition: 0s;
+}
+.block1{
+    background-color: #000;
+    width: 200%;
+}
+.block2{
+    background-color: #000;
+    width: 400%;
+}
+.block3{
+    background-color: #000;
+    width: 600%;
+}
+.block4{
+    background-color: #000;
+    width: 800%;
+}
+
+@media only screen and (max-width: 480px) {
+    .tower {
+        width: 1em;
+        height: 12em;
+    }
+    .block1{
+        width: 190%;
+    }
+    .block2{
+        width: 320%;
+    }
+    .block3{
+        width: 430%;
+    }
+    .block4{
+        width: 550%;
+    }
+}
