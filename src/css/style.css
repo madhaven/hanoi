@@ -1,3 +1,6 @@
+:root {
+    --smaller: .75;
+}
 body{
     height: 100vh;
     width: 100vw;
@@ -7,6 +10,64 @@ body{
     padding: 0;
     overflow: hidden;
 }
+
+/* Counter and timer */
+.header {
+    position: relative;
+    height: 5em;
+    top: 3em;
+    align-items: center;
+    width: auto;
+    background-color: #000000;
+    display: flex;
+    font-family: -apple-system, 
+      BlinkMacSystemFont, 
+      "Segoe UI", 
+      Roboto, 
+      Oxygen-Sans, 
+      Ubuntu, 
+      Cantarell, 
+      "Helvetica Neue", 
+      sans-serif;
+  }
+  
+  .container {
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .container ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1em;
+  }
+  
+  li span {
+    display: block;
+    font-size: 2rem;
+  }
+  
+  
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+
+
 #space{
     display:flex;
     width:100%;
