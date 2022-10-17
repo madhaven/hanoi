@@ -15,7 +15,6 @@ body{
 .header {
     position: relative;
     height: 5em;
-    top: 3em;
     align-items: center;
     width: auto;
     background-color: #000000;
@@ -45,28 +44,13 @@ body{
     display: inline-block;
     list-style-type: none;
     padding: 1em;
+    font-size: 1rem;
   }
   
   li span {
     display: block;
     font-size: 2rem;
   }
-  
-  
-  @media all and (max-width: 768px) {
-    h1 {
-      font-size: calc(1.5rem * var(--smaller));
-    }
-    
-    li {
-      font-size: calc(1.125rem * var(--smaller));
-    }
-    
-    li span {
-      font-size: calc(3.375rem * var(--smaller));
-    }
-  }
-
 
 #space{
     display:flex;
@@ -129,17 +113,6 @@ body{
 }
 
 @media only screen and (max-width: 480px) {
-    #space{
-        display: flex;
-        flex-direction: column;
-    }
-    .towerSpace{
-        width: 100%;
-        height: 33.33%;
-    }
-    .tower{
-        height: 60%;
-    }
     .block1{
         width: 200%;
     }
@@ -153,3 +126,24 @@ body{
         width: 500%;
     }
 }
+@media only screen and (max-width: 810px) {
+    #space{
+        display: flex;
+        flex-direction: column;
+    }
+    .towerSpace{
+        width: 100%;
+        height: 31%;
+    }
+    .tower{
+        height: 60%;
+    }
+}
+@media all and (max-width: 768px) {
+    li {
+      font-size: calc(1rem * var(--smaller));
+    }
+    li span {
+      font-size: calc(2rem * var(--smaller));
+    }
+  }
