@@ -6,6 +6,22 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: linear-gradient(to bottom,#06283D ,30%,#3f6c7d )
+}
+.title-box{
+    height: 10vh;
+    display: grid;
+    place-content: center;    
+    margin-top: 5%;
+    }
+.title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;   
+    background: linear-gradient(#B9FFF8 50%,#22bfa2 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+   
 }
 #space{
     display:flex;
@@ -24,30 +40,32 @@ body{
 .tower{
     width: 2em;
     height: 40vh;
-    background-color: #0008;
+    background: linear-gradient(to top,#041C32,45%,#4FBDBA );
     border-radius: 8px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     cursor: pointer;
+    box-shadow: 5px 5px 5px#000000;
     /* position: */
 }
 .tower.selected .block:last-child{
     transform: translate(0, -100%);
 }
 .towerSpace:hover .tower :last-child{
-    box-shadow: 0 5px 8px 1px #0008;
+    box-shadow: 0 5px 8px 1px rgba(150, 138, 138, 0.533);
     transition: 0s;
 }
 .block{
     height:10%;
     margin-top: .5em;
-    border: 1px solid transparent;
+    border: 1.5px solid ; /*to create shrink effect when hovred*/
     border-radius: 8px;
     transition: .2s ease-out;
+    background: linear-gradient(#4C6793 5%,#000 95%);
 }
 .block:hover{
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     transition: 0s;
 }
 .block1{

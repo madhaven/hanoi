@@ -7,6 +7,7 @@
     <title>Towers of Hanoi | Playground</title>
     <link rel="stylesheet" type="text/css" href="src/css/style.css" />
     <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <script>
         var data = [
             [3, 2, 1, 0],
@@ -88,6 +89,10 @@
     </script>
 </head>
 <body>
+    <div class="title-box">
+        <h1 class="title">Tower of Hanoi</h1>
+    </div>
+    
     <div id="space">
         <div class="towerSpace" onclick="towerClicked(0)" ondrop="dropHandler(0, event)" ondragover="dragOverHandler(event)">
             <div class="tower">
