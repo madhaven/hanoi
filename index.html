@@ -98,6 +98,11 @@
                 blockSelected = undefined
                 towerSelected = undefined
             }
+            if (count === 0) {
+                reset()
+                start()
+                count += 1
+            }
             updateUI()
         }
 
@@ -140,11 +145,6 @@
             console.log('dragging from', tower)
             towerSelected = tower
             blockSelected = data[tower][data[tower].length - 1]
-            if (count === 0) {
-                reset()
-                start()
-                count += 1
-            }
         }
 
         function dropHandler(tower, event){
