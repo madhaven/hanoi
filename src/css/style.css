@@ -7,7 +7,11 @@ body{
     padding: 0;
     overflow: hidden;
 }
+.hidden{
+    display: none;
+}
 
+/* MENU BAR */
 .menu-bar{
     display: flex;
     width: 100vw;
@@ -15,36 +19,32 @@ body{
     justify-content: end;
     position: relative;
 }
-
-.menu{
+.burger-icon{
     cursor: pointer;
     margin: 0.5em;
     z-index: 10;
 }
 .sidemenu{
-    width: 400px;
+    width: 50vw;
     height: 100vh;
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
+    align-items: center;
     padding-left: 1em;
     top: 0;
     right: 0;
     z-index: 1;
-    transition: all 0.5s ease;
+    transition: 0.5s ease;
     background-color: beige;
     transform: translateX(450px);
 }
-
 .sidemenu-moved{
     transform: translateX(0px);
 }
 
-.hidden{
-    display: none;
-}
-
+/* TOWERS */
 #space{
     display:flex;
     width:100%;
