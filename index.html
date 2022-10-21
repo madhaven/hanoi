@@ -25,12 +25,10 @@
         }
 
         // function for timer
-        var stopwatch = document.getElementById("stopwatch");
         var timeoutId = null;
         var ms = 0;
         var sec = 0;
         var min = 0;
-        document.getElementById("stopwatch").innerHTML = '00:00';
         /* function to start stopwatch */
         function start() {
             timeoutId = setTimeout(function() {
@@ -55,7 +53,7 @@
             if (min < 10) {
                 min = '0' + min;
             }
-            stopwatch.innerHTML = min + ':' + sec;
+            document.getElementById("stopwatch").innerHTML = min + ':' + sec;
             // calling start() function recursivly to continue stopwatch
             start();
             }, 10);
@@ -73,7 +71,7 @@
             sec = 0;
             min = 0;
             clearTimeout(timeoutId);
-            stopwatch.innerHTML = '00:00';
+            document.getElementById("stopwatch").innerHTML = '00:00';
         }
 
         // function for timer ends here
@@ -139,14 +137,14 @@
         }
 
         function dragHandler(tower, event){
+            console.log('dragging from', tower)
+            towerSelected = tower
+            blockSelected = data[tower][data[tower].length - 1]
             if (count === 0) {
                 reset()
                 start()
                 count += 1
             }
-            console.log('dragging from', tower)
-            towerSelected = tower
-            blockSelected = data[tower][data[tower].length - 1]
         }
 
         function dropHandler(tower, event){
@@ -195,8 +193,9 @@
             []
         ]
         moves = 0
+        count = 0
         document.getElementById("count").innerText = moves
-        document.getElementById("stopwatch").innerHTML = '00:00';
+        document.getElementById("stopwatch").innerText = '00:00';
         updateUI()
     </script>
 </body>
