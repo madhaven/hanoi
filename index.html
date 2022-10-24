@@ -7,13 +7,21 @@
     <title>Towers of Hanoi | Playground</title>
     <link rel="stylesheet" type="text/css" href="src/css/style.css" />
     <script>
+        // document.onload = ()=>{console.log('DOCLOADED')}
+        var blockSelected = undefined
+        var towerSelected = undefined
+        counter = 0
+        
+        number_of_blocks = 4 // parseInt(prompt('Select the number of Hanoi blocks that you want'))
         var data = [
             [3, 2, 1, 0],
             [],
             []
         ]
-        var blockSelected = undefined
-        var towerSelected = undefined
+
+        function count(){
+            counter += 1
+        }
 
         function towerClicked(index){
             if (blockSelected == undefined){
@@ -27,9 +35,11 @@
                 if (data[index].length == 0){
                     // place the block on the target tower
                     data[index] = [data[towerSelected].pop()]
+                    count()
                 } else if (data[index][data[index].length - 1] > blockSelected){
                     // place the block on the top of the target tower
                     data[index].push(data[towerSelected].pop())
+                    count()
                 }
                 console.log('Block', blockSelected, 'dropped on tower' + (index+1))
                 blockSelected = undefined
@@ -40,6 +50,8 @@
 
         function updateUI(){
             // clears and updates the ui
+
+            counterElement.innerHTML = counter
     
             for (let index=0; index<3; index++){
                 towers[index].innerHTML = ""
@@ -84,6 +96,12 @@
         function dragOverHandler(event){
             event.preventDefault()
         }
+
+        function toggleInfo(){
+            stuff = document.getElementById('info-p');
+            stuff.display = "block";
+        }
+
     </script>
 </head>
 <body>
@@ -100,15 +118,26 @@
         <div class="towerSpace" onclick="towerClicked(2)" ondrop="dropHandler(2, event)" ondragover="dragOverHandler(event)">
             <div class="tower"></div>
         </div>
+        <div id="metrics">
+            <div id="timer">
+                10.00.00
+            </div>
+            <div id="counter">
+                23
+            </div>
+        </div>
+        <div id="info">
+            <div id="info-i" onclick="toggleInfo()">i</div>
+            <p id="info-p">
+                Made for fun by <a href="http://www.github.com/madhaven">madhaven</a>
+                Want to change something? <a href="https://www.github.com/madhaven/hanoi">Create a PR</a>
+                Find an Issue? <a href="http://www.github.com/madhaven/hanoi/issues">Report here</a>
+            </p>
+        </div>
     </div>
     <script>
         towers = document.getElementsByClassName('tower')
-        number_of_blocks = 4 // parseInt(prompt('Select the number of Hanoi blocks that you want'))
-        data = [
-            [3, 2, 1, 0],
-            [],
-            []
-        ]
+        counterElement = document.getElementById('counter')
         updateUI()
     </script>
 </body>
