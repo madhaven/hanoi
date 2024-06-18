@@ -8,13 +8,10 @@
     <link rel="stylesheet" type="text/css" href="src/css/style.css" />
     <link rel="icon" href="src/favicon.ico" type="image/x-icon">
     <script>
-        var data = [
-            [3, 2, 1, 0],
-            [],
-            []
-        ]
         var blockSelected = undefined
         var towerSelected = undefined
+        var data = [[], [], []]
+        var towers = []
 
         function towerClicked(index){
             if (blockSelected == undefined){
@@ -41,8 +38,8 @@
 
         function updateUI(){
             // clears and updates the ui
-    
-            for (let index=0; index<3; index++){
+
+            for (let index=0; index < 3; index++){
                 towers[index].innerHTML = ""
                 
                 // highlight selected pole
@@ -57,6 +54,7 @@
                     element = document.createElement('div')
                     element.classList.add('block'+(block+1))
                     element.classList.add('block')
+                    element.style.width = (200 + (block*200))+"%"
                     towers[index].appendChild(element)
                 }
 
@@ -147,8 +145,16 @@
     </div>
     <script>
         towers = document.getElementsByClassName('tower')
-        number_of_blocks = 4 // parseInt(prompt('Select the number of Hanoi blocks that you want'))
-        data = [[3, 2, 1, 0], [], []]
+        
+        NUMBER_OF_BLOCKS = parseInt(prompt('Select the number of Hanoi blocks that you want'))
+        if (NUMBER_OF_BLOCKS > 10) {
+            alert('You are wasting your time\nOnly 10 are allowed')
+            NUMBER_OF_BLOCKS = 10
+        }
+        data = [[], [], []]
+        for (let x=NUMBER_OF_BLOCKS-1; x>=0; x--)
+            data[0].push(x)
+        
         updateUI()
         toggleColorScheme()
     </script>

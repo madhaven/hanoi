@@ -63,26 +63,11 @@ body{
     border: 1px solid transparent;
     border-radius: 8px;
     transition: .2s ease-out;
+    background-color: var(--fg);
 }
 .block:hover{
     border: 1px solid top;
     /* transition: 0s; */
-}
-.block1{
-    background-color: var(--fg);
-    width: 200%;
-}
-.block2{
-    background-color: var(--fg);
-    width: 400%;
-}
-.block3{
-    background-color: var(--fg);
-    width: 600%;
-}
-.block4{
-    background-color: var(--fg);
-    width: 800%;
 }
 
 @media only screen and (max-width: 480px) {
