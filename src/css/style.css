@@ -15,7 +15,7 @@ body{
     transition: .2s ease-out;
 }
 
-.themeButton{
+.themeButton, .counter{
     position: fixed;
     top: 0;
     right: 0;
@@ -24,6 +24,15 @@ body{
     margin: 1em;
     cursor: pointer;
     color: var(--fg);
+}
+.counter{
+    left: 0;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    margin: .5em;
+    font-weight: bold;
+    cursor: default;
 }
 
 #space{
