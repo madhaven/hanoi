@@ -92,6 +92,12 @@
             event.preventDefault()
         }
 
+        function keyHandler(event){
+            var i = Number.parseInt(event.key) - 1;
+            i = i % 3; // @arshitsuresh
+            if (i >= 0 && i < 3) towerClicked(i);
+        }
+
         // #region Theme
         const THEMES = {
             dark: {
@@ -166,6 +172,7 @@
         
         updateUI()
         toggleColorScheme()
+        document.addEventListener('keydown', keyHandler);
     </script>
 </body>
 </html>
