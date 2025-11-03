@@ -59,6 +59,7 @@
                 // populate towers with blocks
                 for (var block of data[index]) {
                     element = document.createElement('div')
+                    element.innerHTML = block + 1;
                     element.classList.add('block'+(block+1))
                     element.classList.add('block')
                     element.style.width = (200 + (block*200))+"%"
@@ -96,12 +97,14 @@
             dark: {
                 '--bg': '#000',
                 '--layer1': '#fff3',
-                '--fg': '#ccc'
+                '--fg': '#ccc',
+                '--blayer1': '#0008',
             },
             light: {
                 '--bg': '#fff',
                 '--layer1': '#0008',
-                '--fg': '#222'
+                '--fg': '#222',
+                '--blayer1': '#fff8',
             }
         }
         var CURRENT_SCHEME

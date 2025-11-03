@@ -2,6 +2,7 @@
     --bg: #fff;
     --layer1: #0008;
     --fg: #000;
+    --blayer1: #fff8;
 }
 body{
     height: 100vh;
@@ -73,6 +74,11 @@ body{
     border-radius: 8px;
     transition: .2s ease-out;
     background-color: var(--fg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blayer1);
+    font-family: 'Courier New', Courier, monospace;
 }
 .block:hover{
     border: 1px solid top;
