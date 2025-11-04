@@ -7,6 +7,7 @@
     <title>Towers of Hanoi | Playground</title>
     <link rel="stylesheet" type="text/css" href="src/css/style.css" />
     <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         var blockSelected = undefined
         var towerSelected = undefined
@@ -14,6 +15,7 @@
         var towers = undefined
         var moveCounter = undefined
         var moveCount = 0
+        var hasPlayerWon = false;
 
         function towerClicked(index){
             if (blockSelected == undefined){
@@ -41,6 +43,14 @@
                 towerSelected = undefined
             }
             updateUI()
+        }
+
+        function confettiWhenWon(){
+            if (hasPlayerWon || NUMBER_OF_BLOCKS <= 0) return;
+            if (data[2].length === NUMBER_OF_BLOCKS) {
+                hasPlayerWon = true;
+                confetti({ particleCount: 100, spread: 90, origin: { y: 0.6 } });
+            }
         }
 
         function updateUI(){
@@ -74,6 +84,7 @@
                     }
                 }
             }
+            confettiWhenWon()
         }
 
         function dragHandler(tower, event){
